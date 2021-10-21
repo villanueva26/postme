@@ -1,7 +1,7 @@
 /* variables css */
 :root {
-  --primary: #d00791;
-    --dark-primary: #4b2c20;
+  --primary: rgb(196 99 132);
+  --dark-primary: rgb(233 30 99);
     --light-primary: #a98274;
     --secondary: #550149;
     --dark-secondary: #c66900;

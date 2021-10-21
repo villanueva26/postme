@@ -19,11 +19,22 @@ const showPostModal = () => {
 };
 
 // Cuando se cargue todo nuestro DOM
-window.addEventListener('load', () => {
+window.addEventListener('load',async() => {
     MAIN = document.querySelector('#main');
     MODAL_POST = document.querySelector('#modal-post-section');
     BTN_SHOW_POST = document.querySelector('#btn-upload-post');
     BTN_SHOW_POST.addEventListener('click', showPostModal);
     BTN_CANCEL_POST = document.querySelector('#btn-post-cancel');
     BTN_CANCEL_POST.addEventListener('click', closePostModal)
+
+    //Mandar a llamar al service worker
+if('serviceWorker' in navigator)
+ {
+    const response=await navigator.serviceWorker.register('sw.js');
+    if(response)
+    {
+      console.log('Service worker registrado');
+    }
+ }
+
 });
