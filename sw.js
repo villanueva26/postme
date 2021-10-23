@@ -9,3 +9,4 @@ self.addEventListener('activate', async (event) =>{
 self.addEventListener('fetch', (event) =>{
     console.log('Service worker escuchando');
 });
+
